@@ -1,0 +1,14 @@
+.title{
+    font-weight: bold;
+    margin:10px 0;
+}
+
+.report{
+    display: flex;
+    direction:row;
+    align-items: center;
+}
+
+.time{
+    margin: 0 10px; 
+}
