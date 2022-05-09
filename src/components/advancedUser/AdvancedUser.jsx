@@ -31,7 +31,7 @@ const AdvancedUser = () => {
     return (
         <>
             <div>
-                <Accordion>
+                <Accordion  className="animate__animated animate__fadeInUp">
                     <AccordionSummary
                         expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: '#18A4E0' }} />}
                         aria-controls="panel1a-content"
@@ -44,7 +44,7 @@ const AdvancedUser = () => {
                         <BasicMode />
                     </AccordionDetails>
                 </Accordion>
-                <Accordion>
+                <Accordion  className="animate__animated animate__fadeInUp">
                     <AccordionSummary
                         expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: '#18A4E0' }} />}
                         aria-controls="panel1a-content"

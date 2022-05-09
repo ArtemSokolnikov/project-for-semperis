@@ -11,6 +11,7 @@ const BasicUser = () => {
 
     const AccordionSummary = styled((props) => (
         <MuiAccordionSummary
+           
             expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
             {...props}
         />
@@ -30,9 +31,9 @@ const BasicUser = () => {
 
     return (
         <div>
-            <Accordion>
+            <Accordion className="animate__animated animate__fadeInUp">
                 <AccordionSummary
-                    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: '#18A4E0'}} />}
+                    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: '#18A4E0' }} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     sx={{ color: '#18A4E0' }}
