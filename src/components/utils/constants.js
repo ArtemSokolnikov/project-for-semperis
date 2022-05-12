@@ -29,19 +29,19 @@ if (!localStorage.getItem('state')) {
   localStorage.setItem('state', JSON.stringify(stateDefault));
 }
 
-let stateLocal = JSON.parse(localStorage.getItem('state'));
-export let numberOfDayLocal = stateLocal.advancedMode.numberOfDay;
-export let timeLocal = stateLocal.advancedMode.time;
-export let checkedMainLocal = stateLocal.advancedMode.checkedMain;
-export let checkedGBLocal = stateLocal.advancedMode.checkedGB;
-export let checkedPercentLocal = stateLocal.advancedMode.checkedPercent;
-export let disableLocal = stateLocal.advancedMode.disable;
-export let disableGBLocal = stateLocal.advancedMode.disableGB;
-export let disablePercentLocal = stateLocal.advancedMode.disablePercent;
-export let checkedBasicLocal = stateLocal.basicMode.checkedBasic;
-export let disableBasicLocal = stateLocal.basicMode.disableBasic;
-export let timeBasicLocal = stateLocal.basicMode.timeBasic;
-export let waitMinutesLocal = stateLocal.basicMode.waitMinutes;
+const stateLocal = JSON.parse(localStorage.getItem('state'));
+export const numberOfDayLocal = stateLocal.advancedMode.numberOfDay;
+export const timeLocal = stateLocal.advancedMode.time;
+export const checkedMainLocal = stateLocal.advancedMode.checkedMain;
+export const checkedGBLocal = stateLocal.advancedMode.checkedGB;
+export const checkedPercentLocal = stateLocal.advancedMode.checkedPercent;
+export const disableLocal = stateLocal.advancedMode.disable;
+export const disableGBLocal = stateLocal.advancedMode.disableGB;
+export const disablePercentLocal = stateLocal.advancedMode.disablePercent;
+export const checkedBasicLocal = stateLocal.basicMode.checkedBasic;
+export const disableBasicLocal = stateLocal.basicMode.disableBasic;
+export const timeBasicLocal = stateLocal.basicMode.timeBasic;
+export const waitMinutesLocal = stateLocal.basicMode.waitMinutes;
 
-let types = JSON.parse(localStorage.getItem('type'));
-export let elem = types[Math.trunc(Math.random() * types.length)];
+const types = JSON.parse(localStorage.getItem('type'));
+export const elem = types[Math.trunc(Math.random() * types.length)];

@@ -6,7 +6,6 @@ const Header = () => {
         <div className="container-fluid p-2 ps-2 mt-5 border-bottom">
             <div className="animate__animated animate__pulse"><h3 className={style.header}>Health Alerts</h3></div>
         </div>
-
     )
 }
 

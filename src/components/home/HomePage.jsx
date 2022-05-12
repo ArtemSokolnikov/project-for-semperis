@@ -4,11 +4,14 @@ import AdvancedUser from '../advancedUser/AdvancedUser';
 import BasicUser from '../basicUser/BasicUser';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
-import { advanced, basic, checkedBasicLocal, checkedGBLocal, checkedMainLocal, checkedPercentLocal, disableBasicLocal, disableGBLocal, disableLocal, disablePercentLocal, elem, numberOfDayLocal, stateDefault, timeBasicLocal, timeLocal, waitMinutesLocal } from '../utils/constants';
+import {
+  advanced, basic, checkedBasicLocal, checkedGBLocal, checkedMainLocal, checkedPercentLocal, disableBasicLocal,
+  disableGBLocal, disableLocal, disablePercentLocal, elem, numberOfDayLocal, stateDefault, timeBasicLocal,
+  timeLocal, waitMinutesLocal
+} from '../utils/constants';
 import { UserContext } from '../utils/context';
 
 const HomePage = () => {
-
   const [numberOfDay, setNumberOfDay] = useState(numberOfDayLocal || '1');
   const [time, setTime] = useState(timeLocal || "07:30");
   const [checkedMain, setCheckedMain] = useState(checkedMainLocal || true);
@@ -42,22 +45,24 @@ const HomePage = () => {
       time: time
     }
   };
-  
+
   useEffect(() => {
-    if (checkedBasic === true && disableBasic === true) {
+    if (checkedBasic && disableBasic) {
       setCheckedBasic(false);
       setDisableBasic(true);
       setCheckedSave(true);
       setCheckedDiscard(true);
     }
-    if (checkedMain === true && disable === true && disableGB === true && disablePercent === true) {
+    if (checkedMain&& disable && disableGB && disablePercent) {
       setCheckedMain(false);
       setDisable(true);
       setDisableGB(true);
       setDisablePercent(true);
       setCheckedSave(true);
       setCheckedDiscard(true);
-    }window.history.pushState(null, '', elem)}, [])
+    }
+    window.history.pushState(null, '', elem)
+  }, [])
 
   return (
     <UserContext.Provider value={{
@@ -66,7 +71,7 @@ const HomePage = () => {
       setDisableGB, setDisablePercent, checkedBasic, disableBasic, timeBasic, waitMinutes, setCheckedBasic,
       setDisableBasic, setTimeBasic, setWaitMinutes, checkedSave, setCheckedSave, checkedDiscard, setCheckedDiscard, numberOfDayLocal,
       timeLocal, checkedMainLocal, checkedGBLocal, checkedPercentLocal, disableLocal, disableGBLocal, disablePercentLocal,
-      checkedBasicLocal, disableBasicLocal, timeBasicLocal, waitMinutesLocal,stateDefault
+      checkedBasicLocal, disableBasicLocal, timeBasicLocal, waitMinutesLocal, stateDefault
     }}>
       <Header />
       <Routes>

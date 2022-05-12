@@ -36,8 +36,7 @@ const Footer = () => {
 
   return (
     <div className="container-fluid p-2 ps-2 mt-4">
-      <Stack direction="row" spacing={9} className = ' animate__animated animate__pulse'>
-        
+      <Stack direction="row" spacing={9} className='animate__animated animate__pulse'>
         <Stack direction="row" spacing={2}>
           <Button onClick={handleChange} sx={{ borderRadius: '40px' }} variant="contained" disabled={checkedSave} >Save</Button>
           <Button onClick={handleChangeDiscard} sx={{ borderRadius: '40px' }} variant="contained" disabled={checkedDiscard}>Discard</Button>
